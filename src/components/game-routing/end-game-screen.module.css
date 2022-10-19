@@ -1,0 +1,29 @@
+.paperSide,
+.scissorsSide,
+.rockSide {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background-color: white;
+  border-radius: 50em;
+  border: 24px solid;
+  box-shadow: 0 0 3px;
+}
+.paperSide img,
+.scissorsSide img,
+.rockSide img {
+  margin-top: 25px;
+  margin-left: 23px;
+  width: 80px;
+  height: 80px;
+}
+.paperSide {
+  border-color: hsl(230, 89%, 62%);
+}
+.scissorsSide {
+  border-color: hsl(39, 89%, 49%);
+}
+
+.rockSide {
+  border-color: hsl(349, 71%, 52%);
+}

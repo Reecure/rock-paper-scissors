@@ -1,0 +1,48 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+.gameCards {
+  margin-top: 150px;
+  margin-left: 130px;
+  width: 100%;
+  height: 275px;
+  background-repeat: no-repeat;
+  background-image: url('../../../public/images/bg-triangle.svg');
+}
+
+.paperSide,
+.scissorsSide,
+.rockSide {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background-color: white;
+  border-radius: 50em;
+  border: 24px solid;
+  box-shadow: 0 0 3px;
+}
+.paperSide img,
+.scissorsSide img,
+.rockSide img {
+  margin-top: 25px;
+  margin-left: 23px;
+  width: 80px;
+  height: 80px;
+}
+.paperSide {
+  top: -60px;
+  left: -55px;
+  border-color: hsl(230, 89%, 62%);
+}
+.scissorsSide {
+  top: -242px;
+  left: 200px;
+  border-color: hsl(39, 89%, 49%);
+}
+
+.rockSide {
+  top: -180px;
+  left: 65px;
+  border-color: hsl(349, 71%, 52%);
+}

@@ -1,0 +1,15 @@
+.titleBlock {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  border: gray 3px solid;
+  border-radius: 15px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  font-family: CustomBold;
+  color: white;
+}
