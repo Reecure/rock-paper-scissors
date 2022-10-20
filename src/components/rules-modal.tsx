@@ -15,11 +15,12 @@ function RulesModal() {
             onClick={() => dispatch(close())}
             className={styles.modalClose}
             src={closeIco}
+            alt="img"
           />
         </div>
 
         <div className={styles.modalRulesImage}>
-          <img src={rulesImg} />
+          <img src={rulesImg} alt="img" />
         </div>
       </div>
     </div>

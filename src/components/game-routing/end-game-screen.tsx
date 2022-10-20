@@ -1,14 +1,11 @@
 import GameTitle from '../game-title';
 import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { selectCard } from '../../redux/reducers/cards-reducer';
 import paperImg from './game-images/icon-paper.svg';
 import scissorsImg from './game-images/icon-scissors.svg';
 import rockImg from './game-images/icon-rock.svg';
 import styles from './end-game-screen.module.css';
-import Rules from '../rules';
-import RulesModal from '../rules-modal';
-import { modalToggler } from '../../redux/reducers/rules-reduser';
 
 function EndGameScreen() {
   function getRandomSide() {
