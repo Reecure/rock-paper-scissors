@@ -1,3 +1,40 @@
+.wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.resultBlock {
+  margin: 50px;
+}
+
+.resultBlock a {
+  text-decoration: NONE;
+  color: hsl(229, 25%, 31%);
+}
+.resultBlock h2 {
+  font-family: CustomBold;
+  font-size: 50px;
+  color: white;
+}
+
+.picked p {
+  font-family: CustomBold;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.playAgain {
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: white;
+  font-family: CustomSemiBold;
+}
+
 .paperSide,
 .scissorsSide,
 .rockSide {

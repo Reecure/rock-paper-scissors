@@ -4,14 +4,21 @@ import styles from './game-start-screen.module.css';
 import paperImg from './game-images/icon-paper.svg';
 import scissorsImg from './game-images/icon-scissors.svg';
 import rockImg from './game-images/icon-rock.svg';
-import { useDispatch } from 'react-redux';
-import { paper, scissors, rock } from '../../redux/reducer';
+import { useDispatch, useSelector } from 'react-redux';
+import { paper, scissors, rock } from '../../redux/reducers/cards-reducer';
+import Rules from '../rules';
+import RulesModal from '../rules-modal';
+import { modalToggler } from '../../redux/reducers/rules-reduser';
 
 function GameStartScreen() {
   const dispatch = useDispatch();
+  const modalOpen = useSelector(modalToggler);
 
   return (
     <div>
+      <div className={!modalOpen ? `${styles.rulesModal}` : ''}>
+        <RulesModal />
+      </div>
       <div>
         <GameTitle />
       </div>
@@ -36,6 +43,9 @@ function GameStartScreen() {
             </div>
           </Link>
         </div>
+      </div>
+      <div className={styles.rulesBtn}>
+        <Rules />
       </div>
     </div>
   );

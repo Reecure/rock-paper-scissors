@@ -46,3 +46,14 @@
   left: 65px;
   border-color: hsl(349, 71%, 52%);
 }
+
+.rulesBtn {
+  position: relative;
+  float: right;
+  bottom: 0;
+  top: 100px;
+}
+
+.rulesModal {
+  display: none;
+}

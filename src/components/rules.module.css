@@ -1,0 +1,14 @@
+.rulesBtn button {
+  padding: 10px;
+  width: 100px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+  background-color: unset;
+  color: white;
+  font-size: 16px;
+  font-family: CustomSemiBold;
+  cursor: pointer;
+}

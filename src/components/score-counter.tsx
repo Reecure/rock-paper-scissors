@@ -1,4 +1,5 @@
 import styles from './score-counter.module.css';
+import { useSelector } from 'react-redux';
 
 function ScoreCounter() {
   return (
