@@ -1,6 +1,6 @@
 import GameTitle from '../game-title';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector} from 'react-redux';
 import { selectCard } from '../../redux/reducers/cards-reducer';
 import paperImg from './game-images/icon-paper.svg';
 import scissorsImg from './game-images/icon-scissors.svg';
@@ -8,39 +8,7 @@ import rockImg from './game-images/icon-rock.svg';
 import styles from './end-game-screen.module.css';
 
 function EndGameScreen() {
-  function getRandomSide() {
-    return Math.floor(Math.random() * 3);
-    // 0 paperSide
-    // 1 scissorsSide
-    // 2 rockSide
-  }
-
-  function gameResult() {
-    if (
-      (selectedSide === 'paper' && side === 0) ||
-      (selectedSide === 'scissors' && side === 1) ||
-      (selectedSide === 'rock' && side === 2)
-    ) {
-      return 'IT`S TIE';
-    } else if (
-      (selectedSide === 'paper' && side === 1) ||
-      (selectedSide === 'rock' && side === 0) ||
-      (selectedSide === 'scissors' && side === 2)
-    ) {
-      return 'YOU LOSE';
-    } else if (
-      (selectedSide === 'paper' && side === 2) ||
-      (selectedSide === 'rock' && side === 1) ||
-      (selectedSide === 'scissors' && side === 0)
-    ) {
-      return 'YOU WIN';
-    }
-  }
-
-  const selectedSide = useSelector(selectCard);
-
-  const side = getRandomSide();
-  const result = gameResult();
+    const {result, name: selectedSide, compSide } = useSelector(selectCard);
 
   return (
     <div>
@@ -90,20 +58,20 @@ function EndGameScreen() {
             </div>
             <div
               className={
-                side === 0
+                compSide === 0
                   ? `${styles.paperSide}`
-                  : side === 1
+                  : compSide === 1
                   ? `${styles.scissorsSide}`
-                  : side === 2
+                  : compSide === 2
                   ? `${styles.rockSide}`
                   : ''
               }
             >
-              {side === 0 ? (
+              {compSide === 0 ? (
                 <img src={paperImg} alt="img" />
-              ) : side === 1 ? (
+              ) : compSide === 1 ? (
                 <img src={scissorsImg} alt="img" />
-              ) : side === 2 ? (
+              ) : compSide === 2 ? (
                 <img src={rockImg} alt="img" />
               ) : (
                 ''
